@@ -11,6 +11,13 @@
     <li class="nested">
         <ul class="leaders inner">
             <li><span>1.1 - Features</span><span><strong>3</strong></span></li>
+            <li><span>1.2 - Libraries</span><span><strong>3</strong></span></li>
+            <li class="nested">
+                <ul class="leaders inner">
+                    <li><span>1.2a - SQLite3</span><span><strong>3</strong></span></li>
+                    <li><span>1.2b - Tkinter</span><span><strong>3</strong></span></li>
+                </ul>
+            </li>
         </ul>
     </li>
 </ul>
@@ -28,4 +35,18 @@ This program includes the following features:
    * The ability to change save locations
    * The ability to edit the database schema
    * The ability to change the appearance of the app
-### 1.2 - 
+### 1.2 - Libraries
+The libraries used to interface with the database and produce the GUI are both included in Python's standard library. These are SQLite3 and Tkinter respectively. Other libraries may ultimately be used in the development of this project, however the two aforementioned libraries will definitely feature in the final program.
+#### 1.2a - SQLite3
+This library is a Python wrapper for the original SQLite C module. It provides classes and methods for interfacing with a local disk stored database and does not require a separate server to host the database itself. Due to this nature, SQLite is suited to small, fast-access databases making it perfect for this sort of application.
+#### 1.2b - Tkinter
+The inclusion of Tkinter in the Python standard library and the fact that it is a wrapper for a C library means that there is plenty of documentation available for all of the included features. The library also uses a simple system of customisable preset widgets which makes the creation of small interactive applications quick and easy. Given the narrow scope of this project, Tkinter should be a perfect choice for a GUI library.
+<div class="page"></div>
+
+## 2 - Basic Database Design
+<div class="page"></div>
+
+## 3 - UI Design
+<div class="page"></div>
+
+## 4 - Development
