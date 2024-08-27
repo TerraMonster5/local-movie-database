@@ -53,6 +53,8 @@ While writing the previous section of this documentation I realised it may be he
 <img style="width: 40%;" src="images/first-revision.svg">
 
 This new column will be populated automatically using the current system date and time.
+#### Optional Columns
+I had thought to add a column to the database for the director of the film, however I realised that this may not be desireable for every user so I am instead adding it as an optional field toggleable by the user. Under the settings menu there will be a button to add the new column to the database schema. This could be done through editing the database schema manually, however not every user is likely to be knowledgable enough to do this, hence the simple to use button. Other optional fields could include writers and producers.
 <div class="page"></div>
 
 ## 3 - UI Design
