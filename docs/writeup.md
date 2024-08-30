@@ -45,12 +45,12 @@ The inclusion of Tkinter in the Python standard library and the fact that it is 
 
 ## 2 - Basic Database Design
 At defaults the program only uses a flat file database as little data is stored about each film. The first draft of an entity relationship diagram for the database is as follows:
-<img style="width: 40%;" src="images/local-movie-database.svg">
+<img style="width: 40%;" src="images/local_movie_database.svg">
 
 The `FilmID` field is an auto-incremented value and is used merely as a unique primary key for each record; the `ReleaseYear` field is currently optional, however will be clamped betwwen the years of 1888 and one year following the data of entry. The two remaining fields are both required.
 #### First Revision
 While writing the previous section of this documentation I realised it may be helpful the search or order records based upon the date upon which they were entered into the database. This requires an extra column in the table shown below:
-<img style="width: 40%;" src="images/first-revision.svg">
+<img style="width: 40%;" src="images/first_revision.svg">
 
 This new column will be populated automatically using the current system date and time.
 #### Optional Columns
@@ -58,10 +58,11 @@ I had thought to add a column to the database for the director of the film, howe
 <div class="page"></div>
 
 ## 3 - UI Design
-The main window of the program will contain a toolbar at the top for navigating to other parts of the program; the main table displaying records from the database and a number of fields for creating new records. The following diagram displays a fairly rudimentary wireframe of a possible design for the main page of the program.
+The main window of the program will contain a toolbar at the top for navigating to other parts of the program; the main table displaying records from the database and a number of fields for creating new records. The following diagram displays a fairly rudimentary wireframe of a possible design for the main page of the program:
 <img style="width: 70%;" src="images/main_window.svg">
 
-One of the options under the `Options` tab of the toolbar is the settings menu for the program. This menu will open in a new window which is designed as such below.
+One of the options under the `Options` tab of the toolbar is the settings menu for the program. This menu will open in a new window; an initial design for this window follows:
+<img style="width: 52.5%;" src="images/settings_window.svg">
 <div class="page"></div>
 
 ## 4 - Development
