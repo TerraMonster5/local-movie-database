@@ -58,6 +58,10 @@ I had thought to add a column to the database for the director of the film, howe
 <div class="page"></div>
 
 ## 3 - UI Design
+The main window of the program will contain a toolbar at the top for navigating to other parts of the program; the main table displaying records from the database and a number of fields for creating new records. The following diagram displays a fairly rudimentary wireframe of a possible design for the main page of the program.
+<img style="width: 70%;" src="images/main_window.svg">
+
+One of the options under the `Options` tab of the toolbar is the settings menu for the program. This menu will open in a new window which is designed as such below.
 <div class="page"></div>
 
 ## 4 - Development
