@@ -66,3 +66,8 @@ One of the options under the `Options` tab of the toolbar is the settings menu f
 <div class="page"></div>
 
 ## 4 - Development
+This section contains a log of the development of the final programmed product. It follows a mostly chronological order, however some modules that are suited to go earlier than their chronological position have been moved there; most noteably some of the custom widgets.
+### 4.1 - Custom Widgets
+These modules are all modifications or amalgamations of default Tkinter widgets that have been created to aid the development of the whole app. There is also a custom module used in the program that was written by me for a different project, so the development process for that is not included.
+#### 4.1a - Affixed Entry Widget
+For on of the fields for creating a new record in the database I wanted to apply an uneditable suffix to the users input and display that in the entry widget. Therefore, I decided to create a custom widet for this that allows both preffixes and suffixes as this may come in handy for future projects also.
