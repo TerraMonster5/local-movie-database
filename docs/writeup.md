@@ -70,4 +70,51 @@ This section contains a log of the development of the final programmed product. 
 ### 4.1 - Custom Widgets
 These modules are all modifications or amalgamations of default Tkinter widgets that have been created to aid the development of the whole app. There is also a custom module used in the program that was written by me for a different project, so the development process for that is not included.
 #### 4.1a - Affixed Entry Widget
-For on of the fields for creating a new record in the database I wanted to apply an uneditable suffix to the users input and display that in the entry widget. Therefore, I decided to create a custom widet for this that allows both preffixes and suffixes as this may come in handy for future projects also.
+For on of the fields for creating a new record in the database I wanted to apply an uneditable suffix to the users input and display that in the entry widget. Therefore, I decided to create a custom widget for this that allows both preffixes and suffixes as this may come in handy for future projects also.
+
+I started by subclassing the default `ttk.Entry` widget and inserting a prefix and suffix passed to the constructor method of the class.
+```py
+class AffixedEntry(ttk.Entry):
+    def __init__(self,
+                 master=None,
+                 preffix="",
+                 suffix="",
+                 cnf={},
+                 **kwargs) -> None:
+
+        kwargs = cnf or kwargs
+
+        super().__init__(master, **kwargs)
+
+        self.insert(0, suffix)
+        self.insert(0, preffix)
+```
+This means that the programmer still has access to all of the functionality of the base widget, while also being able to add a default prefix and suffix. Currently, the added prefix and suffix can be deleted. and selecting the widget places the cursor after the suffix.
+<div class="page"></div>
+
+To be able to make the prefix and suffix uneditable and place the cursor between the affixes I need to add a couple methods bound to events of the widget. The first method will be called when the content of the widget is edited, while the second is called if the widget is selected. I also had to add a couple of attributes to allow the prefix and suffix to be accessed in the other methods.
+```py
+class AffixedEntry(ttk.Entry):
+    def __init__(self,
+                 master=None,
+                 preffix="",
+                 suffix="",
+                 cnf={},
+                 **kwargs) -> None:
+
+        kwargs = cnf or kwargs
+
+        super().__init__(master, **kwargs)
+
+        self.__preffix = preffix
+        self.__suffix = suffix
+
+        self.insert(0, suffix)
+        self.insert(0, preffix)
+
+    def changedEvent(self, event) -> None:
+        pass
+
+    def clickedEvent(self, event) -> None:
+        pass
+```
